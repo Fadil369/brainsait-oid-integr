@@ -19,19 +19,26 @@ A comprehensive OID (Object Identifier) Registry Explorer and Management Platfor
 - **Progression**: User sees root node → Expands branches (Geographic, Organization, Products) → Clicks leaf nodes → Views detailed metadata
 - **Success criteria**: All OID paths are correctly displayed with proper dot notation, expandable/collapsible branches work smoothly
 
+### Visual OID Path Builder (PRIMARY FEATURE)
+- **Functionality**: Interactive visual builder that shows the hierarchical path from root to selected node and generates complete, production-ready implementation examples across 6 different contexts (FHIR, MCP, X.509, API, Database, QR/RFID)
+- **Purpose**: Eliminates manual transcription errors and provides comprehensive, copy-paste ready code for integrating OIDs into real-world systems
+- **Trigger**: User selects any node in the tree
+- **Progression**: Node selection → Visual path display (breadcrumb style) → Tab interface with 6 implementation types → View code with context → Copy individual implementations or download all → Implementation guidance for each context
+- **Success criteria**: All generated code is syntactically correct, includes contextual usage notes, provides multiple language examples, and offers one-click copy and bulk download
+
 ### Node Detail Panel
 - **Functionality**: Displays comprehensive information about selected OID node including full path, description, use cases, and implementation examples
 - **Purpose**: Provides context and guidance for how each OID branch should be used in production systems
-- **Trigger**: User clicks any node in the tree
+- **Trigger**: User clicks any node in the tree and switches to "Node Details" tab
 - **Progression**: Node selection → Panel slides in → Shows metadata → Displays code examples → Offers copy/export actions
 - **Success criteria**: Information is clear, contextual, and immediately actionable
 
 ### Code Generator
-- **Functionality**: Generates implementation code for selected OID in multiple contexts (FHIR extensions, MCP URNs, X.509 certificates, API headers)
-- **Purpose**: Eliminates manual transcription errors and accelerates integration with external systems
-- **Trigger**: User selects "Generate Code" for a specific implementation type
-- **Progression**: Select node → Choose implementation type (FHIR/MCP/X.509/API) → View generated code → Copy to clipboard
-- **Success criteria**: Generated code is syntactically correct and follows best practices for each target system
+- **Functionality**: Generates implementation code for selected OID in multiple contexts (FHIR extensions, MCP URNs, X.509 certificates, API headers, Database schemas, QR/RFID tags)
+- **Purpose**: Eliminates manual transcription errors and accelerates integration with external systems with production-ready, comprehensive code examples
+- **Trigger**: User selects node and views "Path Builder" tab
+- **Progression**: Select node → Visual path breadcrumb displays → Choose implementation type via tabs → View generated code with context → Copy individual code or download all implementations
+- **Success criteria**: Generated code is syntactically correct, follows best practices for each target system, includes multiple language examples (JavaScript, Python, CURL, SQL), provides usage context, and allows one-click copy or bulk download
 
 ### Custom OID Registration
 - **Functionality**: Add new leaf nodes to existing branches with description and metadata
