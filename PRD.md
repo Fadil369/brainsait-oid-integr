@@ -33,12 +33,12 @@ A comprehensive OID (Object Identifier) Registry Explorer and Management Platfor
 - **Progression**: Node selection → Panel slides in → Shows metadata → Displays code examples → Offers copy/export actions
 - **Success criteria**: Information is clear, contextual, and immediately actionable
 
-### Code Generator
-- **Functionality**: Generates implementation code for selected OID in multiple contexts (FHIR extensions, MCP URNs, X.509 certificates, API headers, Database schemas, QR/RFID tags)
-- **Purpose**: Eliminates manual transcription errors and accelerates integration with external systems with production-ready, comprehensive code examples
+### Code Generator with QR Code Preview
+- **Functionality**: Generates implementation code for selected OID in multiple contexts (FHIR extensions, MCP URNs, X.509 certificates, API headers, Database schemas, QR/RFID tags) with live QR code preview and customization
+- **Purpose**: Eliminates manual transcription errors and accelerates integration with external systems with production-ready, comprehensive code examples. QR code preview enables immediate physical asset tagging with configurable size and error correction
 - **Trigger**: User selects node and views "Path Builder" tab
-- **Progression**: Select node → Visual path breadcrumb displays → Choose implementation type via tabs → View generated code with context → Copy individual code or download all implementations
-- **Success criteria**: Generated code is syntactically correct, follows best practices for each target system, includes multiple language examples (JavaScript, Python, CURL, SQL), provides usage context, and allows one-click copy or bulk download
+- **Progression**: Select node → Visual path breadcrumb displays → Choose implementation type via tabs → (If QR Code tab) View live QR code preview with asset data → Adjust QR code size and error correction level → Download, print, or share QR code → View generated code with context → Copy individual code or download all implementations
+- **Success criteria**: Generated code is syntactically correct, follows best practices for each target system, includes multiple language examples (JavaScript, Python, CURL, SQL), provides usage context, and allows one-click copy or bulk download. QR codes are scannable, customizable, and include all necessary asset metadata
 
 ### Custom OID Registration with AI Suggestions
 - **Functionality**: Add new leaf nodes to existing branches with AI-powered naming and description suggestions based on use case context
@@ -128,6 +128,7 @@ Animations should feel **technical and purposeful** - like watching infrastructu
   - CodeBlock component with syntax highlighting and one-click copy
   - OIDPath component that formats dot-notation with proper spacing
   - BreadcrumbNav showing current position in OID hierarchy
+  - QRCodePreview component with live canvas rendering, size adjustment slider (200-600px), error correction level selector (L/M/Q/H), and action buttons for download, print, and share functionality
 
 - **States**:
   - Buttons: Default has sharp edges with subtle shadow, Hover adds cyan border glow, Active scales down 98%, Disabled reduces opacity to 40%
@@ -143,6 +144,8 @@ Animations should feel **technical and purposeful** - like watching infrastructu
   - Plus / Trash (for CRUD operations)
   - MagnifyingGlass (for search)
   - CaretDown / CaretRight (for tree expansion)
+  - Download / Printer / Share (for QR code actions)
+  - QrCode (for QR code tab indicator)
 
 - **Spacing**:
   - Section padding: `p-6`

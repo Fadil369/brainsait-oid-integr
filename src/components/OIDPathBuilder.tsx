@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { toast } from 'sonner'
 import { CodeBlock } from './CodeBlock'
+import { QRCodePreview } from './QRCodePreview'
 import { getNodePath } from '@/lib/oid-utils'
 import type { OIDNode } from '@/lib/oid-data'
 import { cn } from '@/lib/utils'
@@ -260,6 +261,16 @@ export function OIDPathBuilder({ root, selectedNode }: OIDPathBuilderProps) {
                       </div>
                     </CardHeader>
                     <CardContent>
+                      {impl.type === 'qrcode' && (
+                        <div className="mb-6">
+                          <QRCodePreview
+                            data={JSON.stringify(JSON.parse(impl.generator(selectedNode).split('\n\n')[0]), null, 0)}
+                            title={selectedNode.name}
+                            description={`OID: ${selectedNode.oid}`}
+                          />
+                        </div>
+                      )}
+                      
                       <CodeBlock
                         code={impl.generator(selectedNode)}
                         language={impl.language}
