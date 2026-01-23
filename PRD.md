@@ -40,12 +40,12 @@ A comprehensive OID (Object Identifier) Registry Explorer and Management Platfor
 - **Progression**: Select node → Visual path breadcrumb displays → Choose implementation type via tabs → View generated code with context → Copy individual code or download all implementations
 - **Success criteria**: Generated code is syntactically correct, follows best practices for each target system, includes multiple language examples (JavaScript, Python, CURL, SQL), provides usage context, and allows one-click copy or bulk download
 
-### Custom OID Registration
-- **Functionality**: Add new leaf nodes to existing branches with description and metadata
-- **Purpose**: Allows organization to extend the namespace as new products or services are created
+### Custom OID Registration with AI Suggestions
+- **Functionality**: Add new leaf nodes to existing branches with AI-powered naming and description suggestions based on use case context
+- **Purpose**: Allows organization to extend the namespace intelligently with professionally-named nodes that align with enterprise architecture patterns
 - **Trigger**: User clicks "Add Child Node" on any branch
-- **Progression**: Select parent → Enter name and description → Assign next available ID → Validate uniqueness → Save to registry
-- **Success criteria**: New OIDs are properly nested, globally unique within the tree, and persist between sessions
+- **Progression**: Select parent → Describe use case → AI generates 3 contextual suggestions → Select or customize suggestion → Assign next available ID → Validate uniqueness → Save to registry
+- **Success criteria**: New OIDs are properly nested, globally unique within the tree, AI suggestions are relevant and professionally formatted, and all nodes persist between sessions
 
 ### Quick Search
 - **Functionality**: Filter OID tree by keyword, path segment, or use case
@@ -53,6 +53,13 @@ A comprehensive OID (Object Identifier) Registry Explorer and Management Platfor
 - **Trigger**: User types in search input
 - **Progression**: Type query → Tree filters in real-time → Matching nodes highlight → Non-matches dim
 - **Success criteria**: Search is instant and highlights all relevant results
+
+### AI-Powered Node Suggestions (NEW)
+- **Functionality**: Generates contextually appropriate OID node names, descriptions, and use cases based on user-provided intent and parent node context
+- **Purpose**: Eliminates naming inconsistencies and accelerates registry expansion with enterprise-grade suggestions that follow BrainSAIT's architectural patterns
+- **Trigger**: User describes use case in the "Add Child Node" dialog and clicks "Generate AI Suggestions"
+- **Progression**: User enters use case description → AI analyzes parent node context + user intent → Generates 3 suggestions with names, descriptions, use cases, and node types → User selects preferred suggestion or customizes → Form auto-populates → User reviews and saves
+- **Success criteria**: AI suggestions are technically accurate, align with parent node's domain, follow naming conventions, and are immediately usable without modification
 
 ## Edge Case Handling
 
