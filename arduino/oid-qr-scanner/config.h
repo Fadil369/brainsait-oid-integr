@@ -19,13 +19,13 @@
 
 // ============== BRAINSAIT API ==============
 
-// Production API
-#define BRAINSAIT_API_URL   "https://api.brainsait.com/oid"
-#define BRAINSAIT_API_KEY   "your-api-key-here"
+// NetworkShare Server (local network)
+#define BRAINSAIT_API_URL   "http://192.168.100.220:8080/oid"
+#define BRAINSAIT_API_KEY   "brainsait-oid-scanner-001"
 
-// Development/Local API (uncomment for testing)
-// #define BRAINSAIT_API_URL   "http://192.168.1.100:3000/oid"
-// #define BRAINSAIT_API_KEY   "dev-api-key"
+// Production API (uncomment for production use)
+// #define BRAINSAIT_API_URL   "https://api.brainsait.com/oid"
+// #define BRAINSAIT_API_KEY   "your-production-api-key"
 
 // ============== OID CONFIGURATION ==============
 
